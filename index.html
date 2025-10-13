@@ -10,18 +10,20 @@
     <meta name="description" content="RainyDays makes durable, mid-range outdoor jackets for all weather so you stay comfortable on every adventure." />
     <meta name="keywords" content="outdoor jackets, waterproof jackets, durable outerwear, hiking clothing, all-weather jacket">
     <meta name="author" content="Urve Kriiva">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/media.css">
     <title>Home | Rainydays</title>
 </head>
 <body>
     <nav>
         <button class="sign-in-btn avatar" aria-label="account">
-          <img src="assets/avatar.png" alt="">
+          <img src="assets/icons/avatar.png" alt="">
         </button>
         <section class="logo">
-          <img src="assets/RainyDays_Logo.png" alt="Adventurer canoeing in the rain on river trip">
+          <img src="assets/icons/logo.png" alt="">
         </section>
         <a href="checkout/index.htm" class="cart" aria-label="Cart">
-          <img src="assets/bag.png" class="shopping-bag">
+          <img src="assets/icons/shopping-bag.png" class="shopping-bag">
           <span id="cartCount" class="badge">2</span>
         </a>
       </nav>
@@ -47,7 +49,14 @@
                   </div>
                 </div>
               </div>
-              <section class="products"></section>
+              <section class="products">
+                <!-- This will be added with JS -->
+                <a class="product-card" href="product/index.html" aria-label="View Storm Shell details">
+                    <img class="pc-img" src="assets/RainyDays_Jacket1.jpg" alt="Storm Shell jacket" />
+                    <h3 class="pc-title">Storm Shell</h3>
+                    <p class="pc-price">$129.99</p>
+                </a>
+              </section>
         </div>
       </main>
       <footer class="wide-footer-bg">

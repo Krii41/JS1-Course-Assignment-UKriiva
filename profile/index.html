@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="description" content="RainyDays makes durable, mid-range outdoor jackets for all weather so you stay comfortable on every adventure." />
+    <meta name="keywords" content="outdoor jackets, waterproof jackets, durable outerwear, hiking clothing, all-weather jacket">
+    <meta name="author" content="Urve Kriiva">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/media.css">
+    <title>My Profile</title>
+</head>
+    <body>
+        <nav>
+            <button class="sign-in-btn avatar" aria-label="account">
+              <img src="../assets/icons/avatar.png" alt="">
+            </button>
+            <section class="logo">
+              <img src="../assets/icons/logo.png" alt="">
+            </section>
+            <a href="../checkout/index.html" class="cart" aria-label="Cart">
+              <img src="../assets/icons/shopping-bag.png" class="shopping-bag">
+              <span id="cartCount" class="badge">2</span>
+            </a>
+          </nav>
+          <main>
+            <main class="profile-page">
+                <section class="welcome">
+                  <h1>Hello,<br>Jane Doe!</h1>
+                </section>
+                <section class="card" aria-labelledby="sec-profile">
+                  <h2 id="sec-profile">Profile</h2>
+                  <form>
+                    <div class="row">
+                      <label for="firstName">First name</label>
+                      <input id="firstName" name="firstName" type="text" placeholder="Jane" />
+                    </div>
+                    <div class="row">
+                      <label for="lastName">Last name</label>
+                      <input id="lastName" name="lastName" type="text" placeholder="Doe" />
+                    </div>
+                    <div class="row">
+                      <label for="email">Email</label>
+                      <input id="email" name="email" type="email" placeholder="jane@example.com" />
+                    </div>
+                    <div class="actions">
+                      <button class=" primary" type="submit" disabled>Save changes</button>
+                      <button class="btn" type="reset" disabled>Reset</button>
+                    </div>
+                  </form>
+                </section>
+                <section class="card" aria-labelledby="sec-security">
+                  <h2 id="sec-security">Security</h2>
+                  <form>
+                    <div class="row">
+                      <label for="currPass">Current password</label>
+                      <input id="currPass" name="currPass" type="password" />
+                    </div>
+                    <div class="row">
+                      <label for="newPass">New password</label>
+                      <input id="newPass" name="newPass" type="password" />
+                    </div>
+                    <div class="row">
+                      <label for="rePass">Confirm new password</label>
+                      <input id="rePass" name="rePass" type="password" />
+                    </div>
+                    <div class="actions">
+                      <button class="primary" type="submit" disabled>Update password</button>
+                    </div>
+                  </form>
+                </section>
+                <section class="card" aria-labelledby="sec-address">
+                  <h2 id="sec-address">Addresses</h2>
+                  <div class="list">
+                    <div class="item">
+                      <span class="tag">Default</span>
+                      <div>
+                        <div class="address-details">
+                          <h4>Home</h4>
+                        </div>
+                        <p>123 Fjord St, Oslo, 0123, Norway</p>
+                      </div>
+                      <div class="actions">
+                        <button class="btn">Edit</button>
+                        <button class="btn">Remove</button>
+                      </div>
+                    </div>
+                    <button class="primary">Add new address</button>
+                  </div>
+                </section>
+                <section class="card" aria-labelledby="sec-pay">
+                  <h2 id="sec-pay">Payment methods</h2>
+                  <div class="list">
+                    <div class="item">
+                      <span class="tag">Default</span>
+                      <div class="payment-details">
+                        <h4>Visa •••• 4242</h4>
+                        <p>Expires 12/27</p>
+                      </div>
+                      <div class="actions">
+                        <button class="btn">Set default</button>
+                        <button class="btn">Remove</button>
+                      </div>
+                    </div>
+                    <button class="primary">Add payment method</button>
+                  </div>
+                </section>
+                <section class="card" aria-labelledby="sec-orders">
+                  <h2 id="sec-orders">Last orders</h2>
+                  <div class="empty" id="ordersEmpty">
+                    You don't have any orders yet.
+                  </div>
+                  <!-- Table for LATER (hidden until you populate it with JS) -->
+                  <div id="ordersTableWrap" hidden>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Order #</th>
+                          <th>Date</th>
+                          <th>Status</th>
+                          <th class="right">Total</th>
+                        </tr>
+                      </thead>
+                      <tbody id="ordersBody">
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </main>
+          </main>
+          <footer class="wide-footer-bg">
+            <div class="footer-content">
+              <div class="mountains-top">
+                <img src="../assets/icons/mountains.png" alt="Mountain silhouette">
+              </div>
+              <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+              </div>
+            </div>
+            <div class="copyright">
+              &copy; 2025 Rainydays
+            </div>
+          </footer>
+    </body>
+</html>

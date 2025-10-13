@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #0a3641;
+    --secondary-color: #d8dbe0;
+    --secondary-clr-light: #e6e7ea;
+    --light-color: #ffffff;
+    --smooth-transition: .8s;
+    --button-buy-bg: #d32f2f;
+    --img-width: 100%;
+}
