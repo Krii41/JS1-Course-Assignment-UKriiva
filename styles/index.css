@@ -764,7 +764,8 @@ footer {
 .mountains-top img {
     width: var(--img-width);
     height: 50px;
-    align-self: flex-start;    
+    align-self: flex-start;  
+    object-fit: contain;  
 }
 
 footer a {
