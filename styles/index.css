@@ -375,8 +375,10 @@ legend {
 /*   Checkout page   */
 
 .cart-layout {
+    margin: 0 1em;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2.5em;
 }
 
@@ -479,7 +481,6 @@ legend {
 }
 
 .summary {
-    border-left: 1px solid var(--secondary-color);
     padding-left: 2em;
     display: flex;
     flex-direction: column;

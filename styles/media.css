@@ -1,0 +1,79 @@
+@media (max-width: 400px){
+    .hero-text {
+        bottom: 32px;
+        padding: 0;
+    }
+
+    .hero-main-text {
+        font-size: 2.5rem;
+    }
+
+    .products-toolbar {
+        flex-direction: column;
+        
+    }
+
+    .toolbar-font {
+        margin: 1em;
+        font-size: 1.5rem;
+    }
+
+    .gender-filter {
+        margin: 0 0 1em 0;
+    }
+
+    .products {
+        gap: 1em;
+    }
+
+    .product-info {
+        align-items: center;
+    }
+
+    .page-title {
+        margin-top: 1em;
+    }
+
+    .cart-layout {
+       flex-direction: column;
+    }
+
+    .summary {
+        border: none;
+        margin-right: 1.3em;
+    }
+
+    .cart-row {
+        gap: 1em;
+    }
+    
+
+    .row {
+        display: flex;
+    }
+
+    footer {
+        margin-top: 3em;
+
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        justify-content: center;
+
+    }
+
+    .mountains-top {
+        align-self: center;
+        
+    }
+
+    .footer-links {
+        margin: .5em;
+        gap: .5em;
+        flex-direction: column;
+    }
+
+
+}
