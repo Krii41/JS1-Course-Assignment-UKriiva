@@ -24,10 +24,6 @@ a {
     color: var(--primary-color);
 }
 
- .home-page {
-    min-height: 0;
-}
-
 /*    navigation    */
 
 nav {
@@ -109,12 +105,12 @@ nav {
     margin: 0 auto;
     position: relative;      
     height: 85vh;            
-    overflow: hidden;  
+    overflow: hidden; 
+    width: 100vw; 
 }
 
 .hero-img {
     position: absolute;
-    
     inset: 0;
     z-index: 0;
 }
@@ -205,6 +201,7 @@ nav {
 }
 
 /*    Product cards    */
+
 
 .products {
     margin: 0 2em;
