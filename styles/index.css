@@ -735,10 +735,6 @@ th {
   .row { 
       grid-template-columns: 1fr; 
   }
-
-  header, main { 
-      padding:12px; 
-  }
 }    
 
 /*    Footer    */
