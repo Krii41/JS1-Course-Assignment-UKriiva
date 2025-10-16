@@ -52,6 +52,55 @@
         display: flex;
     }
 
+    .welcome {
+       justify-self: center;
+       text-align: center;
+    }
+
+    .welcome h1 {
+        margin: 1em 0 .5em 0;
+    }
+
+    .profile-page {
+        margin: 1em;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "hello"
+        "profile"
+        "security"
+        "addresses"
+        "payment"
+        "orders";
+    }
+
+    .welcome {
+        grid-area: hello;
+    }
+
+    .profile {
+        grid-area: profile;
+    }
+
+    .security {
+        grid-area: security;
+    }
+
+    .address {
+        grid-area: addresses;
+    }
+
+    .payment {
+        grid-area: payment;
+    }
+
+    .orders {
+        grid-area: orders;
+    }
+
+
+
+    
+
     footer {
         margin-top: 3em;
 
