@@ -16,7 +16,7 @@
 </head>
 <body>
     <nav>
-        <button class="sign-in-btn avatar modal" aria-label="account" id="profileBtn">
+        <button class="sign-in-btn avatar" aria-label="account" id="signInBtn">
           <img src="assets/icons/avatar.png" alt="">
         </button>
         <a href="index.html">
@@ -29,7 +29,37 @@
           <span id="cartCount" class="badge">2</span>
         </a>
       </nav>
-      <div id="signIn" class="signIn"></div>
+
+      <div class="modal" id="modal" hidden>
+        <button class="btn-close" id="btn-close" type="button" aria-label="Close">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      
+        <h2 id="signInTitle" class="sign-in-title">Sign In</h2>
+      
+        <form id="login-form" action="form-success.php" method="post" aria-labelledby="signInTitle">
+          <label for="username">Enter Username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Enter Username"
+            required
+            autocomplete="username" />
+      
+          <label for="password">Enter Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Enter Password"
+            required
+            autocomplete="current-password" />
+      
+          <button class="login-btn" id="login-btn" type="submit">Log In</button>
+        </form>
+      </div>
+
       <main>
         <section class="hero-content">
             <div class="hero-img">
