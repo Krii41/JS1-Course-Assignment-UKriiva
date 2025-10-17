@@ -18,12 +18,12 @@ const loginForm = document.getElementById("login-form");
     const username = (document.getElementById("username").value || "").trim();
     if (!username) return;
 
-    sessionStorage.setItem("username", username);
+    localStorage.setItem("username", username);
     window.location.href = "profile/index.html";
   });
 
-  const profileNameEl = document.getElementById("profileName");
-  if (profileNameEl) {
-    const name = (sessionStorage.getItem("username") || "Guest").trim();
-    profileNameEl.textContent = name || "Guest";
+  const profileName = document.getElementById("profileName");
+  if (profileName) {
+    const name = (localStorage.getItem("username")).trim();
+    profileName.textContent = name;
   }
