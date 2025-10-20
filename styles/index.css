@@ -290,7 +290,8 @@ label {
     border-radius: 12px;
     box-shadow: 0 8px 18px rgba(0,0,0,.1);
     overflow: hidden;
-    max-width: none;               
+    max-width: none; 
+    cursor: pointer;              
     text-decoration: none;                         
     transition: transform 0.8s ease;
 }
