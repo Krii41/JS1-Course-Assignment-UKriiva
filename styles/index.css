@@ -322,7 +322,12 @@ label {
 
 /*    Product page    */
 
-.single-product {
+.product-container {
+    margin: 5em 1.5em;    
+}
+
+.product-detail {
+    border: 1px solid red;
     margin: 3em 1.5em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
