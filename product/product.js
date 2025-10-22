@@ -75,7 +75,7 @@ async function createProduct() {
 
 
     } catch(error) {
-        //
+        console.error("Failed to create product");
     }
 }
 
