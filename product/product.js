@@ -1,6 +1,33 @@
 const productContainer = document.querySelector("#product-container");
 const API_URL = "https://v2.api.noroff.dev/rainy-days"; 
 
+function getCart() {
+    try {
+        return JSON.parse(localStorage.getItem("cart")) || { items: [] };
+    } catch {
+        return { items: []};
+    };
+};
+
+function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+};
+
+function addToCart(item) {
+    const cart = getCart();
+    const key = (i) => `${i.id}:${i.size ?? ""}`;
+    const existing = cart.items.find(i => key(i) === key(item));
+
+    if (existing) existing.qty += item.qty;
+    else cart.items.push(item);
+
+    saveCart(cart);
+
+    const badge = document.getElementById("cartCount");
+
+    if (badge) badge.textContent = String(cart.items.reduce((n, i) => n + i.qty, 0));
+}
+
 async function createProduct() {
     try {
         const params = new URLSearchParams(window.location.search);
@@ -9,7 +36,7 @@ async function createProduct() {
         if(!id) {
             productContainer.textContent = "No product ID provided";
             return;
-        }
+        };
 
         const response = await fetch(`${API_URL}/${id}`);
         const data = await response.json();
@@ -72,6 +99,22 @@ async function createProduct() {
         article.append(imageDiv, info);
 
         productContainer.appendChild(article)
+
+        btn.addEventListener("click", () => {
+            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || null;
+
+            addToCart({
+                id: product.id,
+                title: product.title,
+                price: Number(product.price),
+                image: product.image?.url || "",
+                alt: product.image?.alt || product.title || "Product image",
+                qty: 1,
+                size: selectedSize
+            });
+
+            alert(`${product.title} added to cart`);
+        });
 
 
     } catch(error) {
