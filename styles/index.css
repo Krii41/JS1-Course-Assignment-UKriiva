@@ -209,7 +209,7 @@ label {
     margin-top: 8em;
     font-family: "Roboto", sans-serif;
     color: #ffff;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #444343;
     text-align: center;
     font-size: 3.5rem;
     /* background-color: rgb(255, 255, 255, .20); */ 
@@ -222,7 +222,7 @@ label {
     margin-top: 0.3em;
     margin-bottom: 0.5em;
     font-weight: 200;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #444343;
     letter-spacing: 1px;
     /* background-color: rgb(255, 255, 255, .20); */ 
     border-radius: 10px; 
@@ -427,6 +427,17 @@ legend {
     box-shadow: 0 8px 18px rgba(0,0,0, .18);
 }
 
+.cta-purchased {
+    background-color: #5f7836;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    padding: .5em 1.6em;
+    margin-top: 2em;
+    transition: 0.5s;
+}
+
 .back-button {
     color: #999b9d;
     transition: var(--smooth-transition);
@@ -449,6 +460,13 @@ legend {
 }
 
 /*   Checkout page   */
+
+.cart-empty {
+    padding: 2rem 0;
+    font-size: 1.1rem;
+    color: #6b7280;
+    text-align: center;
+  }
 
 .cart-layout {
     margin: 0 1em;

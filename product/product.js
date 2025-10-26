@@ -87,7 +87,8 @@ async function createProduct() {
                 size: selectedSize
             });
 
-            alert(`${product.title} added to cart`);
+            btn.className = "cta-purchased";
+            btn.textContent = "Added to Cart";
         });
 
 
