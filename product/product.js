@@ -1,32 +1,6 @@
 const productContainer = document.querySelector("#product-container");
 const API_URL = "https://v2.api.noroff.dev/rainy-days"; 
 
-function getCart() {
-    try {
-        return JSON.parse(localStorage.getItem("cart")) || { items: [] };
-    } catch {
-        return { items: []};
-    };
-};
-
-function saveCart(cart) {
-    localStorage.setItem("cart", JSON.stringify(cart));
-};
-
-function addToCart(item) {
-    const cart = getCart();
-    const key = (i) => `${i.id}:${i.size ?? ""}`;
-    const existing = cart.items.find(i => key(i) === key(item));
-
-    if (existing) existing.qty += item.qty;
-    else cart.items.push(item);
-
-    saveCart(cart);
-
-    const badge = document.getElementById("cartCount");
-
-    if (badge) badge.textContent = String(cart.items.reduce((n, i) => n + i.qty, 0));
-}
 
 async function createProduct() {
     try {
@@ -123,3 +97,30 @@ async function createProduct() {
 }
 
 createProduct();
+
+function getCart() {
+    try {
+        return JSON.parse(localStorage.getItem("cart")) || { items: [] };
+    } catch {
+        return { items: []};
+    };
+};
+
+function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+};
+
+function addToCart(item) {
+    const cart = getCart();
+    const key = (i) => `${i.id}:${i.size ?? ""}`;
+    const existing = cart.items.find(i => key(i) === key(item));
+
+    if (existing) existing.qty += item.qty;
+    else cart.items.push(item);
+
+    saveCart(cart);
+
+    const badge = document.getElementById("cartCount");
+
+    if (badge) badge.textContent = String(cart.items.reduce((n, i) => n + i.qty, 0));
+}

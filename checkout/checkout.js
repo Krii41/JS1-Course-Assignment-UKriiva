@@ -1,13 +1,29 @@
-let cart = [];
+function getCart() {
+    try {
+        return JSON.parse(localStorage.getItem("cart")) || { items: []};
+    } catch {
+        return { items: []};
+    }
+}
+
+let cart = getCart().items;
 
 
 
 function renderCart() {
     const cartLayout = document.querySelector(".cart-layout");
 
-    if(!cartLayout) return console.error("No items here... yet or whatever");
+    if(!cartLayout) return;
 
     cartLayout.replaceChildren();
+
+    if(!cart.length) {
+        const emtyCart = document.createElement("p");
+        p.className = "cart-emty";
+        p.textContent = "No products here yet";
+        cartLayout.appendChild(emtyCart);
+        return;
+    }
 
     const cartItems = document.createElement("section");
     cartItems.className = "cart-items";
@@ -84,7 +100,7 @@ function renderCart() {
     subHeading.textContent = "Order summary";
 
     const subtotalVal = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    const shippingVal = shipCost(subtotalVal);
+    const shippingVal = 30;
     const totalVal = subtotalVal + shippingVal;
 
     const row1 = row("Subtotal", "$" + Number(subtotalVal).toFixed(2));
