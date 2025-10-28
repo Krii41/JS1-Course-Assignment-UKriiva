@@ -1,14 +1,8 @@
-function getCart() {
-    try {
-        return JSON.parse(localStorage.getItem("cart")) || { items: []};
-    } catch {
-        return { items: []};
-    }
-}
+import { clearCart , getCart , saveCart, updateCartBadge } from "../js/shared/cart.js"
+
+getCart();
 
 let cart = getCart().items;
-
-
 
 function renderCart() {
     const cartLayout = document.querySelector(".cart-layout");
@@ -113,6 +107,13 @@ function renderCart() {
     checkout.className = "checkout";
     checkout.textContent = "Checkout";
 
+    checkout.addEventListener("click", () => {
+        clearCart();
+        updateCartBadge();
+    });
+
+
+
     aside.append(subHeading, row1, row2, hr, rowTotal, checkout);
 
     cartLayout.append(cartItems, aside);
@@ -130,6 +131,7 @@ function renderCart() {
             } else {
                 localStorage.setItem("cart", JSON.stringify(data));
             }
+            saveCart({ items: cart});
             renderCart();
         }
 
@@ -139,6 +141,7 @@ function renderCart() {
             if(!item) return;
             const plus = t.textContent.trim() === "+";
             item.qty = Math.max(1, (item.qty || 1) + (plus ? 1 : -1));
+            saveCart({ items: cart});
             renderCart();
         }
     });
@@ -167,3 +170,5 @@ function renderCart() {
 };
 
 renderCart();
+
+updateCartBadge();

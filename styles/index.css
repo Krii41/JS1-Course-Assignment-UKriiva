@@ -95,7 +95,7 @@ nav {
     text-align: center;
 }
 
-.badge:empty {
+.badge[hidden] {
     display: none;
 }
 
@@ -209,10 +209,9 @@ label {
     margin-top: 8em;
     font-family: "Roboto", sans-serif;
     color: #ffff;
-    text-shadow: 2px 2px 4px #444343;
+    text-shadow: 0 2px 8px rgba(0,0,0,.6);
     text-align: center;
     font-size: 3.5rem;
-    /* background-color: rgb(255, 255, 255, .20); */ 
     border-radius: 10px;
     padding: .2em;  
 } 
@@ -222,9 +221,8 @@ label {
     margin-top: 0.3em;
     margin-bottom: 0.5em;
     font-weight: 200;
-    text-shadow: 2px 2px 4px #444343;
+    text-shadow: 0 1px 6px rgba(0,0,0,.5);
     letter-spacing: 1px;
-    /* background-color: rgb(255, 255, 255, .20); */ 
     border-radius: 10px; 
     padding: .5em;    
 }
@@ -409,33 +407,32 @@ legend {
 
 .description {
     margin-top: 1em;
-}  
+}
 
-.cta-btn {
-    background-color: var(--button-buy-bg);
+.cta-btn,
+.cta-purchased {
     border: none;
-    border-radius: 8px;
     color: var(--light-color);
     font-size: 1.25rem;
     padding: .5em 1.6em;
+    border-radius: 8px;
     margin-top: 2em;
     transition: 0.5s;
+}
+
+.cta-btn {
+    background-color: var(--button-buy-bg);
 } 
 
-.cta-btn:hover {
+.cta-btn:hover,
+.cta-purchased:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 18px rgba(0,0,0, .18);
 }
 
 .cta-purchased {
-    background-color: #5f7836;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.25rem;
-    padding: .5em 1.6em;
-    margin-top: 2em;
-    transition: 0.5s;
+    background-color: #679436;
+    text-shadow: 0px 0px 1px #4d4c4c;
 }
 
 .back-button {
