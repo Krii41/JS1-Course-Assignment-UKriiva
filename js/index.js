@@ -78,8 +78,8 @@ updateCartBadge();
 import { updateCartBadge } from "./shared/cart.js";
 
 const productsContainer = document.querySelector("#products-container");
-const filterGroup = document.querySelector(".gender-filter");
-const API_URL = "https://v2.api.noroff.dev/rainy-days"; 
+const API_URL = "https://v2.api.noroff.dev/rainy-days";
+const filter = document.querySelector(".gender-filter");
 
 
 async function createProducts() {
@@ -105,6 +105,7 @@ async function createProducts() {
             title.textContent = product.title;
             price.textContent = product.price;
             anchor.href = `product/index.html?id=${product.id}`;
+            anchor.dataset.gender = (product.gender || "").toLowerCase();
 
             card.appendChild(image);
             card.appendChild(title);
@@ -122,3 +123,29 @@ async function createProducts() {
 createProducts();
 
 updateCartBadge();
+
+filter?.addEventListener("click", (e) => {
+  const btn = e.target.closest(".gf-btn");
+  if (!btn) return;
+  const g = btn.dataset.gender;
+  const next = productsContainer.dataset.filter === g ? "all" : g;
+  productsContainer.dataset.filter = next;
+
+  filter.querySelectorAll(".gf-btn").forEach(b => {
+    b.setAttribute("aria-pressed", String(b === btn && next === g));
+  });
+});
+
+function resetFilter() {
+  productsContainer.dataset.filter = "all";
+  document.querySelectorAll(".gf-btn").forEach(b => {
+    b.setAttribute("aria-pressed", "false");
+    b.classList.remove("active");
+  });
+}
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".gender-filter")) {
+    resetFilter();
+  }
+});

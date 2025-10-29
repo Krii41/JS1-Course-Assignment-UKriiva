@@ -268,7 +268,19 @@ label {
 .gf-btn[aria-pressed="true"]{
     color: var(--light-color);
     background-color: var(--button-buy-bg);
+    border: 1px solid var(--button-buy-bg);
 }
+
+#products-container[data-filter="male"]   
+    a:not([data-gender="male"]) {
+         display: none; 
+        }
+#products-container[data-filter="female"] 
+    a:not([data-gender="female"]) { 
+        display: none; 
+        }
+
+
 
 /*    Product cards    */
 
