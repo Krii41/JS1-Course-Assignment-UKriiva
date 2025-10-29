@@ -15,7 +15,7 @@ const loginForm = document.getElementById("login-form");
 
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const username = (document.getElementById("username").value || "").trim();
+    const username = (document.getElementById("username")?.value || "").trim();
     if (!username) return;
 
     localStorage.setItem("username", username);
