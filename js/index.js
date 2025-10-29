@@ -19,7 +19,7 @@ const loginForm = document.getElementById("login-form");
     if (!username) return;
 
     localStorage.setItem("rd.username", username);
-    window.location.href = "/profile/index.html";
+    window.location.href = "profile/index.html";
   });
 
   const profileName = document.getElementById("profileName");
