@@ -18,7 +18,7 @@ const loginForm = document.getElementById("login-form");
     const username = (document.getElementById("username").value || "").trim();
     if (!username) return;
 
-    localStorage.setItem("rd.username", username);
+    localStorage.setItem("username", username);
     window.location.href = "../profile/index.html";
   });
 
