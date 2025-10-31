@@ -233,7 +233,7 @@ label {
     margin-top: 8em;
     font-family: "Roboto", sans-serif;
     color: #ffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, .6);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, .4);
     text-align: center;
     font-size: 3.5rem;
     font-weight: 800;
@@ -244,19 +244,19 @@ label {
     color: #fff;
     margin-top: 0.3em;
     margin-bottom: 0.5em;
-    font-weight: 60000;
+    font-weight: 600;
     text-shadow: 0 1px 6px rgba(0, 0, 0, .4);
     letter-spacing: 1px;
     padding: .5em;   
 }
 
 .text-bg {
-    display:inline;
+    display: inline;
     background: rgba(0,0,0,.18);
     padding: .25em .5em;
     border-radius: 10px;
     backdrop-filter: blur(3px);
-  }
+}
 
 /*   Gender filter buttons   */
 
