@@ -24,6 +24,29 @@ a {
     color: var(--primary-color);
 }
 
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    width: 34px;
+    height: 34px;
+    border: 2px solid var(--secondary-clr-light);
+    border-bottom: 2px solid var(--sec-clr-blue);
+    border-radius: 50%;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}  
+  
+
 /*    navigation    */
 
 nav {
@@ -657,7 +680,7 @@ legend {
 }
 
 .hp-return:hover {
-    color: #167f9a;
+    color: var(--sec-clr-blue);
     font-size: 1.3rem;
     text-decoration: underline;    
 } 

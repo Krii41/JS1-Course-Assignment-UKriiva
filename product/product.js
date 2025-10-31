@@ -1,10 +1,12 @@
 import { addToCart, updateCartBadge} from "../js/shared/cart.js";
+import loader from "../js/shared/loader.js";
 
 const productContainer = document.querySelector("#product-container");
 const API_URL = "https://v2.api.noroff.dev/rainy-days"; 
 
 
 async function createProduct() {
+    loader.show()
     try {
         const params = new URLSearchParams(window.location.search);
         const id = params.get("id");
@@ -96,6 +98,8 @@ async function createProduct() {
 
     } catch(error) {
         console.error("Failed to create product");
+    } finally {
+        loader.hide();
     }
 }
 

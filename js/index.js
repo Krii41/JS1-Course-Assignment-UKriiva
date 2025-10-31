@@ -29,6 +29,7 @@ const loginForm = document.getElementById("login-form");
   }
 
 import { updateCartBadge } from "./shared/cart.js";
+import loader from "./shared/loader.js";
 
 const productsContainer = document.querySelector("#products-container");
 const API_URL = "https://v2.api.noroff.dev/rainy-days";
@@ -36,6 +37,7 @@ const filter = document.querySelector(".gender-filter");
 
 
 async function createProducts() {
+    loader.show();
     try {
         const response = await fetch(API_URL);
         const data = await response.json();
@@ -70,6 +72,8 @@ async function createProducts() {
         })
     } catch (error) {
         console.error("Failed to create products"); 
+    } finally {
+      loader.hide();
     }
 }
 
