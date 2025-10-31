@@ -14,7 +14,7 @@ function renderCart() {
     if(!cart.length) {
         const emptyCart = document.createElement("p");
         emptyCart.className = "cart-empty";
-        emptyCart.textContent = "No products here yet";
+        emptyCart.textContent = "Your shopping cart is empty.";
         cartLayout.appendChild(emptyCart);
         return;
     }
