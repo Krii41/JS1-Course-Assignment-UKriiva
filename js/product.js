@@ -1,5 +1,5 @@
-import { addToCart, updateCartBadge } from "../js/shared/cart.js";
-import loader from "../js/shared/loader.js";
+import { addToCart, updateCartBadge } from "./shared/cart.js";
+import loader from "./shared/loader.js";
 
 const productContainer = document.querySelector("#product-container");
 const API_URL = "https://v2.api.noroff.dev/rainy-days";

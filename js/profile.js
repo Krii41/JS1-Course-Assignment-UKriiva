@@ -1,4 +1,4 @@
-import { updateCartBadge } from "../js/shared/cart.js";
+import { updateCartBadge } from "./shared/cart.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   updateCartBadge();

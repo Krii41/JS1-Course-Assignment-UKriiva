@@ -3,7 +3,7 @@ import {
   getCart,
   saveCart,
   updateCartBadge,
-} from "../js/shared/cart.js";
+} from "./shared/cart.js";
 
 getCart();
 
